@@ -1,0 +1,29 @@
+.black{
+    background-color: black;
+}
+.dark-background{
+    background-color: rgb(31, 31, 31);
+}
+.moon{
+    color: white;
+}
+.text-white{
+    color: white;
+}
+
+.darkmode-button{
+  background-color: rgba(77, 82, 88, 0.356);
+}
+.darkmode-button i{
+    color: #007ee6;
+}
+.darkmode-button:hover{
+    background-color: rgba(77, 82, 88, 0.603);
+}
+
+.dark-create-memo-bg{
+    background-color: rgba(0, 0, 0, 0.911);
+}
+.dark-create-memo-bottom{
+    border-bottom: 1px solid white;
+}

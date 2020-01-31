@@ -1,0 +1,31 @@
+.white{
+    background-color: white;
+}
+.sun{
+    color: orange;
+}
+.text-black{
+    color: black;
+}
+.lightmode-button{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 3px grey;
+}
+.text-lightblack{
+    color: rgb(136, 136, 136);
+}
+.lightmode-button:hover{
+    background-color: rgba(197, 197, 197, 0.603);
+    color: rgb(97, 97, 97);
+}
+.create-memo-light-bg{
+    background-color: rgba(255, 255, 255, 0.795);
+}
+.light-create-memo-bottom{
+    border-bottom: 1px solid black;
+}
+.weblinks-input{
+    background-color: white;
+    border: 1px solid grey;
+    color: grey;
+}
