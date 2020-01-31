@@ -1,32 +1,17 @@
-
-import React from 'react'
-import mobiscroll from '@mobiscroll/react';
-import '@mobiscroll/react/dist/css/mobiscroll.min.css';
-
-mobiscroll.settings = {
-    theme: 'ios',
-    themeVariant: 'light'
-};
-z
+import React,{useEffect, useState} from 'react'
 
 function DateComponent() {
+    const [date, setdate] = useState(new Date().toLocaleDateString())
+    const [n, setn] = useState(0)
+    const dateHandler = (event) => {
+        alert(event.target.value);
+    }
     return (
-        <mobiscroll.Form>
-                <div className="mbsc-grid mbsc-form-grid">
-                    <div className="mbsc-row">
-                        <div className="mbsc-col-sm-12 mbsc-col-md-6">
-                            <mobiscroll.Date display="bubble">
-								<mobiscroll.Input inputStyle="box" placeholder="Please Select...">Mobile</mobiscroll.Input>
-							</mobiscroll.Date>
-                        </div>
-    					<div className="mbsc-col-sm-12 mbsc-col-md-6">
-                            <mobiscroll.Date display="bubble" touchUi={false}>
-								<mobiscroll.Input inputStyle="box" placeholder="Please Select...">Desktop</mobiscroll.Input>
-							</mobiscroll.Date>
-                        </div>
-                    </div>
-                </div>
-            </mobiscroll.Form>
+        <React.Fragment>
+            <input type="date" min='31-01-2020' onChange={dateHandler} className="date-select"/>
+            <input type="number" min="1" max="31" value={date} id="date" onChange={dateHandler} required/>
+            <div onClick={() => {setn(n+1)}}>{n}</div>
+        </React.Fragment>
     )
 }
 
