@@ -24,20 +24,16 @@ function App() {
       }
   }
   useEffect(() => {
-    document.addEventListener("keydown", escFunction, false);
     const getStore = async () => {
       const res = await Axios('https://jsonplaceholder.typicode.com/posts');
       setstore(res.data);
       console.log(res.data);
     }
-    setInterval(() => {
+    setTimeout(() => {
       if(loginState){
         getStore();
         setstate(true);
       }
-      return () => {
-        document.removeEventListener("keydown", escFunction, false)
-      };
     }, 1000);
   }, [loginState])
   return (
