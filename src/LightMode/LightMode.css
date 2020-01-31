@@ -1,6 +1,9 @@
 .white{
     background-color: white;
 }
+.dim-white{
+    background-color: rgb(209, 209, 209);
+}
 .sun{
     color: orange;
 }

@@ -14,6 +14,7 @@ function App() {
   const [store, setstore] = useState([]);
   const [loginState, setloginState] = useState(false);
   const [cmemo, setcmemo] = useState(false)
+  const [value, setvalue] = useState({title: ''})
   const toggle = () => {
     setTheme(!Theme);
   }
@@ -45,8 +46,8 @@ function App() {
         <input type="checkbox"/>
         <span className="slider round"></span>
       </label>
-      {state ? <MainPage Theme={Theme} store={store} setcmemo={setcmemo}/> : <LoadingPage Theme={Theme} loginState={loginState} setloginState={setloginState}/>}
-      {cmemo ? <CreateMemo Theme={Theme} setcmemo={setcmemo} cmemo={cmemo}/> : ""}
+      {state ? <MainPage Theme={Theme} store={store} setcmemo={setcmemo} setvalue={setvalue}/> : <LoadingPage Theme={Theme} loginState={loginState} setloginState={setloginState}/>}
+      {cmemo ? <CreateMemo Theme={Theme} setcmemo={setcmemo} cmemo={cmemo} value={value} setvalue={setvalue}/> : ""}
       <FooterApp Theme={Theme}/>
     </React.Fragment>
   );
