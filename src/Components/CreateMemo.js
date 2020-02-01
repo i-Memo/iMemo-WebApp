@@ -8,7 +8,6 @@ function CreateMemo(props) {
     const [rem, setrem] = useState(false);
     const [web, setweb] = useState(false);
     const [links, setlinks] = useState([])
-    const [iframe, setiframe] = useState("")
     const keyHandler = (e) => {
         if(e.keyCode===83 && e.ctrlKey) {
             e.preventDefault() ;
@@ -29,9 +28,6 @@ function CreateMemo(props) {
     const bodyChange = (event) => {
         props.setvalue({... props.value, body: event.target.value})
     }
-    const iframeChange = (event) => {
-        setiframe(event.target.value);
-    }
     useEffect(() => {
         document.addEventListener("keydown", keyHandler, false);
         return () => {
@@ -43,10 +39,9 @@ function CreateMemo(props) {
         <input placeholder="Title" name="title" className={props.Theme ? "white create-memo-db input" : "black text-white create-memo-db input"} value={props.value.title} onChange={titleChange}/>
         {web ? <div className="div-create">
             <div className="div-input">
-            {links.map((el, index) => <React.Fragment><input type="text" name={"link" + index} className={"web-links" + (props.Theme ? " weblinks-input" : " darkmode-button text-white")} onMouseOver={iframeChange}/><a href={el} target="_blank"><i class="fas fa-paper-plane"></i></a><br/></React.Fragment>)}
-            <button type="button" onClick={() => {links.push(''); setlinks(links)}} className="links-add-button"><i class={"fas fa-plus" + (props.Theme ? " text-black" :" text-white")}></i></button>
+            {links.map((el, index) => <React.Fragment><input type="text" name={"link" + index} className={"web-links" + (props.Theme ? " weblinks-input" : " darkmode-button text-white")}/><a href={el} target="_blank"><i class="fas fa-paper-plane"></i></a><br/></React.Fragment>)}
+            <button type="button" onClick={() => {links.push(''); setlinks(links)}} className="links-add-button"><i class={"fas fa-plus" + (props.Theme ? " text-blue" :" text-white")}></i></button>
             </div>
-            <iframe src={iframe} className="iframe"></iframe>
             </div> : 
         <textarea name="body" value={props.value.body} onChange={bodyChange} placeholder="Your Text goes here" className={props.Theme ? "white" : "black text-white"}/>
         }&nbsp;

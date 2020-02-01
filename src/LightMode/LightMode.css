@@ -10,6 +10,9 @@
 .text-black{
     color: black;
 }
+.text-blue{
+    color: #77bdff;
+}
 .lightmode-button{
   background-color: rgb(255, 255, 255);
   box-shadow: 1px 1px 3px grey;
@@ -22,7 +25,7 @@
     color: rgb(97, 97, 97);
 }
 .create-memo-light-bg{
-    background-color: rgba(255, 255, 255, 0.795);
+    background-color: rgba(255, 255, 255, 0.822);
 }
 .light-create-memo-bottom{
     border-bottom: 1px solid black;

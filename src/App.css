@@ -16,6 +16,7 @@
   border: 0;
 }
 
+
 .logo{
   height: 60vh;
   max-width: 100vw;
@@ -85,8 +86,8 @@
   right: 0;
   bottom: 0;
   background-color: #d3d3d3;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .slider:before {
@@ -97,8 +98,8 @@
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .small-bg:before{
@@ -254,7 +255,10 @@ input:checked + .slider:before {
   }
 }
 
+
 .create-memo{
+  max-height: 75vh;
+  overflow-y: auto;
   max-width: 90vw;
   width: 80%;
   position: fixed;
@@ -288,7 +292,6 @@ input:checked + .slider:before {
   padding: 16px;
   overflow-y: scroll;
 }
-
 .div-input{
   float: left;
 }
@@ -296,14 +299,13 @@ input:checked + .slider:before {
 .create-memo .input:focus, .create-memo textarea:focus{
   outline: none;
 }
-
+/* 
 .create-memo .iframe{
   float: right;
   position: fixed;
-  margin-left: -11%;
   width: 28vw;
   height: 18vw;
-}
+} */
 
 
 .web-links{
@@ -366,4 +368,43 @@ label{
 
 .search-dark{
   color: red;
+}
+
+.rc-time-picker input{
+  border: 0;
+  padding: 3px;
+  color: black;
+  font-family: cursive;
+  max-width: 100px;
+}
+
+.rc-time-picker-panel-inner{
+  position: fixed;
+}
+
+.rc-time-picker-panel-input-wrap{
+  display: none;
+}
+.rc-time-picker-panel-combobox{
+  top: 50vh;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 0.8rem;
+  padding: 10px;
+}
+.rc-time-picker-panel-select li:hover{
+  color: black;
+}
+
+.rc-time-picker-panel-select-option-selected{
+  color: black;
+}
+
+.date-select{
+  padding: 4px;
+  font-family: cursive;
+  border-radius: 5px;
+  border: 0;
+  margin: 3px 1rem;
 }

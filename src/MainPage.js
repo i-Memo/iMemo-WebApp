@@ -12,7 +12,7 @@ function MainPage(props) {
         setsearch(event.target.value)        
     }
     return (
-        <div className={props.Theme ? "dim-white" : "dark-background text-white"}>
+        <div className={props.Theme ? "white" : "dark-background text-white"}>
         <input className={"search-button" + (props.Theme ? " lightmode-button text-black" : " darkmode-button text-white")} placeholder="Search Memo" onChange={displayMemo}/>
         <div className="App">
         <button className={"button " + (props.Theme ? "lightmode-button text-lightblack" : "darkmode-button")} onClick={createMemo}>
