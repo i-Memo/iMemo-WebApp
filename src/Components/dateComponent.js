@@ -1,16 +1,29 @@
 import React,{useEffect, useState} from 'react'
+import '../clock.css'
 
 function DateComponent() {
-    const [date, setdate] = useState(new Date().toLocaleDateString())
-    const [n, setn] = useState(0)
+    const [date, setdate] = useState(new Date().toISOString().split("T")[0]);
+    const [time, settime] = useState(new Date().getHours() + ":" + new Date().getMinutes())
+    const getTime = () => {
+        let today = '';
+        if(parseInt(new Date().getHours()) < 10){
+            today += '0' + new Date().getMinutes();
+        } else today += new Date().getMinutes();
+        
+        if(parseInt(new Date().getMinutes()) < 10){
+            today += ':0' + new Date().getMinutes();
+        } else today += ':' + new Date().getMinutes();
+    }
     const dateHandler = (event) => {
-        alert(event.target.value);
+        setdate(event.target.value);
+    }
+    const timehandler = (event) => {
+        alert(event.target.value + " " + time);
     }
     return (
         <React.Fragment>
-            <input type="date" min='31-01-2020' onChange={dateHandler} className="date-select"/>
-            <input type="number" min="1" max="31" value={date} id="date" onChange={dateHandler} required/>
-            <div onClick={() => {setn(n+1)}}>{n}</div>
+            <input type="date" name="rem-date" min={new Date().toISOString().split("T")[0]} value={date} onChange={dateHandler} className="date-select"/>
+            <input type="time" onChange={timehandler} value={time}/>
         </React.Fragment>
     )
 }
