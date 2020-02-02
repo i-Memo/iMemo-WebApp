@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import renderHTML from 'react-render-html'
 import memo from '../LightMode/memo.png'
+import reminder from '../LightMode/reminder.png'
+import AbsoluteComp from './AbsoluteComp'
 
 function MemoDesign(props) {
     const [title, settitle] = useState(props.element.title)
@@ -36,15 +38,15 @@ function MemoDesign(props) {
             <div>
             <div className={"memoBtn " + (props.Theme ? "lightmode-button text-black" : "darkmode-button text-white")} onClick={() => {props.setcmemo(true); props.setvalue(props.element)}}>
                     <span className="text-left">{renderHTML(title)}</span><br/><br/>
-                    <span className="text-right code" style={{marginLeft : -0.1 + 'rem'}}><i className="fas fa-code"></i></span>
+                    {/* <span className="text-right code" style={{marginLeft : -0.1 + 'rem'}}><i className="fas fa-code"></i></span>
                     <span className="text-right memo"><img src={memo} height="22px" alt="m-logo"/></span>
                     <span className="text-right rem"><i className="fas fa-bell"></i></span>
-                    <br/><br/>
+                    <br/><br/> */}
                     <span className="text-body text-lightblack">{body} ...</span><br/><br/>
                     <span className="creation">{props.element.id}/{props.element.id}/{props.element.userId}  13:15:45</span>
-                <button className="absolute-div" type="submit" onClickCapture={shareHandler}>
-                <i className="fas fa-share-square"></i>
-                </button>
+                    {/* <AbsoluteComp type="rem" shareHandler={shareHandler} display={reminder}/> */}
+                    {/* <AbsoluteComp type="memo" shareHandler={shareHandler} display={memo}/> */}
+                    <AbsoluteComp type="code" shareHandler={shareHandler} display={''}/>
             </div>
             </div>
         </React.Fragment>

@@ -60,7 +60,12 @@ function CreateMemo(props) {
         {rem ? <DateComponent/> : ''}&nbsp;
         Links :&nbsp;
         <SliderComp extraOuterClass="small-switch" extraInnerClass="small-bg" id="toggle-web" setfunction={() => {setweb(!web)}}/>&nbsp;&nbsp;
-        <button type="submit" className="save-btn">Save</button>&nbsp;<button onClick={closeCreate} className="close-btn">Cancel</button>
+        <br/>
+        <button type="submit" className="save-btn">Save</button>&nbsp;
+        <button onClick={closeCreate} className="close-btn">Cancel</button>&nbsp;
+        <button className="share-btn" type="submit">
+            <i className="fas fa-share-square"></i>
+        </button>
         </form>, document.getElementById('createMemo')
     )
 }

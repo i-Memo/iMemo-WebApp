@@ -233,17 +233,43 @@ input:checked + .slider:before {
 
 .absolute-div{
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  right: 0rem;
+  bottom: 0rem;
+  border-top-left-radius: 4rem;
   font-size: 22px;
   background-color: transparent;
   border: 0;
+  padding: 25px;
 }
+
 
 .absolute-div:hover{
   cursor: pointer;
   color: #007ee6;
 }
+
+.absolute-div.memo{
+  background-color: rgba(161, 211, 252, 0.432);
+}
+
+.absolute-div.code{
+  background-color: rgba(0, 77, 192, 0.74);
+}
+
+.absolute-div.rem{
+  background-color: rgb(255, 255, 255);
+}
+
+.absolute-div .text-right img{
+  height: 85px;
+  transform: rotate(-20deg);
+}
+
+.absolute-div .text-right i{
+  font-size: 85px;
+  transform: rotate(-30deg);
+}
+
 
 .memoBtn:focus{
   outline: none;
@@ -258,7 +284,10 @@ input:checked + .slider:before {
   font-weight: 700;
   font-size: medium;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  z-index: 3;
 }
+
+
 .text-body{
   font-family: cursive;
 }
@@ -270,16 +299,13 @@ input:checked + .slider:before {
   font-size: 22px;
 }
 .code .fas{
-  color: rgb(0, 177, 0);
-}
-.memo{
-  /* color: #b6a0b1; */
+  color: rgb(255, 226, 64);
 }
 .rem{
   font-size: 22px;
 }
 .rem .fas{
-    color: rgb(255, 74, 255);
+    color: #ff5d5d;
 }
 .search-button{
   padding: 5px;
@@ -287,7 +313,7 @@ input:checked + .slider:before {
   top: 3px;
   left: 2px;
   border: 1px solid grey;
-  z-index: 999;
+  z-index: 999; 
 }
 .search-button:focus{
   outline: none;
@@ -413,7 +439,7 @@ input:checked + .slider:before {
   color: red;
 }
 
-.save-btn, .close-btn{
+.save-btn, .close-btn, .share-btn{
   padding: 4px 10px;
   border: 2px solid #007ee6;
   background-color: #007ee6;
@@ -422,7 +448,7 @@ input:checked + .slider:before {
   font-weight: 600;
 }
 
-.save-btn:hover, .close-btn:hover{
+.save-btn:hover, .close-btn:hover, .share-btn:hover {
   background-color: #0065b8;
   border: 2px solid #0065b8;
   cursor: pointer;
