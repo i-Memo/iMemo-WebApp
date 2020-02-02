@@ -45,8 +45,8 @@ function MemoDesign(props) {
                     <span className="text-body text-lightblack">{body} ...</span><br/><br/>
                     <span className="creation">{props.element.id}/{props.element.id}/{props.element.userId}  13:15:45</span>
                     {/* <AbsoluteComp type="rem" shareHandler={shareHandler} display={reminder}/> */}
-                    {/* <AbsoluteComp type="memo" shareHandler={shareHandler} display={memo}/> */}
-                    <AbsoluteComp type="code" shareHandler={shareHandler} display={''}/>
+                    <AbsoluteComp type="memo" shareHandler={shareHandler} display={memo}/>
+                    {/* <AbsoluteComp type="code" shareHandler={shareHandler} display={''}/> */}
             </div>
             </div>
         </React.Fragment>

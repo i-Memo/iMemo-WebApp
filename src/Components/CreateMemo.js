@@ -65,6 +65,9 @@ function CreateMemo(props) {
         <button onClick={closeCreate} className="close-btn">Cancel</button>&nbsp;
         <button className="share-btn" type="submit">
             <i className="fas fa-share-square"></i>
+        </button>&nbsp;
+        <button className="share-btn" type="submit">
+            <i className="fas fa-file-download"></i>
         </button>
         </form>, document.getElementById('createMemo')
     )

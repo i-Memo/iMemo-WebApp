@@ -249,7 +249,8 @@ input:checked + .slider:before {
 }
 
 .absolute-div.memo{
-  background-color: rgba(161, 211, 252, 0.432);
+  padding: 25px 40px;
+  background-color: rgba(130, 199, 255, 0.699);
 }
 
 .absolute-div.code{
