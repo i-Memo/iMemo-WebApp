@@ -42,5 +42,6 @@
 }
 
 .absolute-div.memodark{
-  background-image: linear-gradient(to right,rgb(0, 16, 46), rgb(9, 68, 134), rgb(0, 17, 53));
+  /* background-image: linear-gradient(to right,rgb(0, 16, 46), rgb(9, 68, 134), rgb(0, 17, 53)); */
+  background-color: rgba(0, 0, 0, 0.63);
 }
