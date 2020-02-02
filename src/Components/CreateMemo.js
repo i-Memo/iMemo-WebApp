@@ -40,7 +40,7 @@ function CreateMemo(props) {
         {web ? <div className="div-create">
             <div className="div-input">
             {links.map((el, index) => <React.Fragment><input type="text" name={"link" + index} className={"web-links" + (props.Theme ? " weblinks-input" : " darkmode-button text-white")}/><a href={el} target="_blank" rel="noopener noreferrer"><i class="fas fa-paper-plane"></i></a><br/></React.Fragment>)}
-            <button type="button" onClick={() => {links.push(''); setlinks(links)}} className="links-add-button"><i class={"fas fa-plus" + (props.Theme ? " text-blue" :" text-white")}></i></button>
+            <button type="button" onClick={() => {links.push(''); setlinks(links)}} className="links-add-button"><i className={"fas fa-plus" + (props.Theme ? " text-blue" :" text-white")}></i></button>
             </div>
             </div> : 
         <textarea name="body" value={props.value.body} onChange={bodyChange} placeholder="Your Text goes here" className={props.Theme ? "white" : "black text-white"}/>
