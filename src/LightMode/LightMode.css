@@ -4,6 +4,12 @@
 .dim-white{
     background-color: rgb(245, 245, 245);
 }
+.light-design-background{
+    background-image: url("./background3.jfif");
+    /* background-image: url("./background.jfif"); */
+    background-repeat: repeat-y;
+    background-size: contain;
+}
 .sun{
     color: orange;
 }
@@ -21,7 +27,7 @@
     color: rgb(136, 136, 136);
 }
 .lightmode-button:hover{
-    background-color: rgba(197, 197, 197, 0.603);
+    background-color: rgb(230, 230, 230);
     color: rgb(97, 97, 97);
 }
 .create-memo-light-bg{

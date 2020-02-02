@@ -10,7 +10,12 @@
 .text-white{
     color: white;
 }
-
+.dark-design-background{
+    background-image: url("./background.jfif");
+    /* background-image: url("./background.jfif"); */
+    background-repeat: repeat-y;
+    background-size: contain;
+}
 .darkmode-button{
   background-color: rgba(77, 82, 88, 0.356);
 }
@@ -18,7 +23,7 @@
     color: #007ee6;
 }
 .darkmode-button:hover{
-    background-color: rgba(77, 82, 88, 0.603);
+    background-color: rgba(77, 82, 88, 0.822);
 }
 
 .dark-create-memo-bg{
