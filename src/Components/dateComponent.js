@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import TimePicker from 'rc-time-picker';
 import moment from 'moment'
 import 'rc-time-picker/assets/index.css';
@@ -9,18 +9,8 @@ const now = moment().hour(0).minute(0);
 
 function DateComponent() {
     const [date, setdate] = useState(new Date().toISOString().split("T")[0]);
-    const getTime = () => {
-        let present = '';
-        if(parseInt(new Date().getHours()) < 10){
-            present += '0' + new Date().getHours();
-        } else present += new Date().getHours();
-        
-        if(parseInt(new Date().getMinutes()) < 10){
-            present += ':0' + new Date().getMinutes();
-        } else present += ':' + new Date().getMinutes();
-        return present;
-    }
-    const [time, settime] = useState(getTime())
+    
+    const [time, settime] = useState(now)
     const dateHandler = (event) => {
         setdate(event.target.value);
     }
@@ -33,7 +23,7 @@ function DateComponent() {
             <input type="date" name="rem-date" min={new Date().toISOString().split("T")[0]} value={date} onChange={dateHandler} className="date-select"/>
             <TimePicker
                 showSecond={false}
-                defaultValue={now}
+                defaultValue={time}
                 className="timeSelector"
                 onChange={timeSelector}
                 format={format}

@@ -21,7 +21,7 @@ function MainPage(props) {
         <ul className="memoList">
         {props.store.map(el => {
             if(el.title.indexOf(search) !== -1 || el.body.indexOf(search) !== -1){
-                return <MemoDesign element={el} Theme={props.Theme} setcmemo={props.setcmemo} setvalue={props.setvalue} search={search}/>
+                return <li className="memoLi" key={el.id}><MemoDesign element={el} Theme={props.Theme} setcmemo={props.setcmemo} setvalue={props.setvalue} search={search}/></li>
             } else {
                 return ''
             }

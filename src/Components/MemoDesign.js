@@ -6,9 +6,15 @@ function MemoDesign(props) {
     const [title, settitle] = useState(props.element.title)
     const [body, setbody] = useState(props.element.body)
     const titleChange = () => {
-        if(props.element.title.indexOf(props.search) != -1){
+        if(props.element.title.indexOf(props.search) !== -1 && props.search !== ''){
             settitle(props.element.title.replace(props.search, `<span className=${props.Theme ? "search-dark" : "search"}>${props.search}</span>`))
         }
+    }
+    const bodyChange = () => {
+        if(body.length > 200)  setbody(body.substring(0, 200))
+    }
+    const shareHandler = (event) => {
+        console.log(title + "\n" + props.element.body);
     }
     // const bodyChange = () => {
     //     if(props.element.body.indexOf(props.search) != -1){
@@ -17,27 +23,31 @@ function MemoDesign(props) {
     // }
     useEffect(() => {
         titleChange()
+        bodyChange()
     })
     return (
-        <li className="memoLi" key={props.element.id}>
+        <React.Fragment>
             {/* {props.element.id}
             {props.element.title}
             {props.type}
             {props.text}
             {props.createdDate}
             {props.time} */}
-            <button className={"memoBtn " + (props.Theme ? "lightmode-button text-black" : "darkmode-button text-white")} onClick={() => {props.setcmemo(true); props.setvalue(props.element)}}>
-                <div>
+            <div>
+            <div className={"memoBtn " + (props.Theme ? "lightmode-button text-black" : "darkmode-button text-white")} onClick={() => {props.setcmemo(true); props.setvalue(props.element)}}>
                     <span className="text-left">{renderHTML(title)}</span><br/><br/>
-                    <span className="text-right code" style={{marginLeft : -0.1 + 'rem'}}><i class="fas fa-code"></i></span>
-                    <span className="text-right memo"><img src={memo} height="22px"/></span>
-                    <span className="text-right rem"><i class="fas fa-bell"></i></span>
+                    <span className="text-right code" style={{marginLeft : -0.1 + 'rem'}}><i className="fas fa-code"></i></span>
+                    <span className="text-right memo"><img src={memo} height="22px" alt="m-logo"/></span>
+                    <span className="text-right rem"><i className="fas fa-bell"></i></span>
                     <br/><br/>
                     <span className="text-body text-lightblack">{body} ...</span><br/><br/>
                     <span className="creation">{props.element.id}/{props.element.id}/{props.element.userId}  13:15:45</span>
-                </div>
-            </button>
-        </li>
+                <button className="absolute-div" type="submit" onClickCapture={shareHandler}>
+                <i className="fas fa-share-square"></i>
+                </button>
+            </div>
+            </div>
+        </React.Fragment>
     )
 }
 

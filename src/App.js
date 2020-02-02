@@ -18,16 +18,15 @@ function App() {
   const toggle = () => {
     setTheme(!Theme);
   }
-  const escFunction = (event) => {
-      if(event.keyCode === 27){
-        setcmemo(false);
-      }
-  }
+  // const escFunction = (event) => {
+  //     if(event.keyCode === 27){
+  //       setcmemo(false);
+  //     }
+  // }
   useEffect(() => {
     const getStore = async () => {
       const res = await Axios('https://jsonplaceholder.typicode.com/posts');
       setstore(res.data);
-      console.log(res.data);
     }
     setTimeout(() => {
       if(loginState){

@@ -47,6 +47,10 @@
   }
 }
 
+input:focus, select:focus, button:focus{
+  outline: none;
+}
+
 #toggle{
   position: fixed;
   right: 1rem;
@@ -193,15 +197,33 @@ input:checked + .slider:before {
   display: inline-block;
 }
 .memoBtn{
-  min-width: 41vw;
-  max-width: 41vw;
+  min-width: 38vw;
+  max-width: 38vw;
   min-height: 20vh;
   padding: 1rem;
   margin: 0.2rem;
   border-radius: 0.5rem;
   border: 0;
   text-align: left !important;
+  position: relative;
+  font-size: 0.9rem;
 }
+
+.absolute-div{
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 22px;
+  background-color: transparent;
+  border: 0;
+}
+
+.absolute-div:hover{
+  cursor: pointer;
+  color: #007ee6;
+  z-index: 1;
+}
+
 .memoBtn:focus{
   outline: none;
 }
@@ -249,7 +271,9 @@ input:checked + .slider:before {
   outline: none;
 }
 
-@media screen and (max-width: 400px){
+
+
+@media screen and (max-width: 600px){
   .memoBtn{
     max-width: 82vw;
   }
@@ -268,6 +292,7 @@ input:checked + .slider:before {
   right: 2%;
   border-radius: 0.5rem;
   border-bottom: 1px solid red;
+  z-index: 3;
 }
 
 .create-memo .input{
@@ -307,6 +332,24 @@ input:checked + .slider:before {
   height: 18vw;
 } */
 
+
+.date-select, .code-select{
+  padding: 4px;
+  font-family: cursive;
+  border-radius: 5px;
+  border: 0;
+  margin: 3px 1rem;
+  box-shadow: 1px 1px 1px grey;
+}
+
+.date-select:hover{
+  background-color: rgb(228, 228, 228);
+}
+
+.code-select{
+  max-height: 100px;
+  overflow-y: scroll;
+}
 
 .web-links{
   padding: 0.6rem;
@@ -348,6 +391,20 @@ input:checked + .slider:before {
   color: red;
 }
 
+.save-btn, .close-btn{
+  padding: 4px 10px;
+  border: 2px solid #007ee6;
+  background-color: #007ee6;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}
+
+.save-btn:hover, .close-btn:hover{
+  background-color: #0065b8;
+  border: 2px solid #0065b8;
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 635px){
   .create-memo .iframe{
@@ -372,10 +429,15 @@ label{
 
 .rc-time-picker input{
   border: 0;
-  padding: 3px;
+  padding: 4px;
   color: black;
   font-family: cursive;
   max-width: 100px;
+  box-shadow: 2px 2px 1px grey;
+}
+
+.rc-time-picker input:hover{
+  background-color: rgb(228, 228, 228);
 }
 
 .rc-time-picker-panel-inner{
@@ -399,12 +461,4 @@ label{
 
 .rc-time-picker-panel-select-option-selected{
   color: black;
-}
-
-.date-select{
-  padding: 4px;
-  font-family: cursive;
-  border-radius: 5px;
-  border: 0;
-  margin: 3px 1rem;
 }

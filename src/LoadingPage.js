@@ -15,7 +15,7 @@ function LoadingPage(props) {
         <div className={props.Theme ? "App white" : "App black"}>
         <header className="App-header">
             <img src={props.Theme ? logoLight : logoDark}  alt="logo" className="logo"/>
-            {!props.loginState ? <button className="loginBtn" onClick={loginHandler}><img src={google} className="Google-logo"/></button> : <img src={props.Theme ? loadingLight : loadingDark} className="App-logo"/>}
+            {!props.loginState ? <button className="loginBtn" onClick={loginHandler}><img src={google} className="Google-logo" alt="google-logo"/></button> : <img src={props.Theme ? loadingLight : loadingDark} className="App-logo" alt="loading"/>}
         </header>
         </div>
     )

@@ -23,10 +23,10 @@ function CreateMemo(props) {
         props.setvalue({title: ''})
     }
     const titleChange = (event) => {
-        props.setvalue({... props.value, title: event.target.value})
+        props.setvalue({...props.value, title: event.target.value})
     }
     const bodyChange = (event) => {
-        props.setvalue({... props.value, body: event.target.value})
+        props.setvalue({...props.value, body: event.target.value})
     }
     useEffect(() => {
         document.addEventListener("keydown", keyHandler, false);
@@ -39,7 +39,7 @@ function CreateMemo(props) {
         <input placeholder="Title" name="title" className={props.Theme ? "white create-memo-db input" : "black text-white create-memo-db input"} value={props.value.title} onChange={titleChange}/>
         {web ? <div className="div-create">
             <div className="div-input">
-            {links.map((el, index) => <React.Fragment><input type="text" name={"link" + index} className={"web-links" + (props.Theme ? " weblinks-input" : " darkmode-button text-white")}/><a href={el} target="_blank"><i class="fas fa-paper-plane"></i></a><br/></React.Fragment>)}
+            {links.map((el, index) => <React.Fragment><input type="text" name={"link" + index} className={"web-links" + (props.Theme ? " weblinks-input" : " darkmode-button text-white")}/><a href={el} target="_blank" rel="noopener noreferrer"><i class="fas fa-paper-plane"></i></a><br/></React.Fragment>)}
             <button type="button" onClick={() => {links.push(''); setlinks(links)}} className="links-add-button"><i class={"fas fa-plus" + (props.Theme ? " text-blue" :" text-white")}></i></button>
             </div>
             </div> : 
@@ -47,7 +47,7 @@ function CreateMemo(props) {
         }&nbsp;
         Code :&nbsp;
         <SliderComp extraOuterClass="small-switch" extraInnerClass="small-bg" id="toggle-code" setfunction={() => {setcode(!code)}}/>&nbsp;
-        {code ? <select>
+        {code ? <select className="code-select">
             <option>Python</option>
             <option>Java</option>
             <option>JavaScript</option>
@@ -59,7 +59,7 @@ function CreateMemo(props) {
         {rem ? <DateComponent/> : ''}&nbsp;
         Links :&nbsp;
         <SliderComp extraOuterClass="small-switch" extraInnerClass="small-bg" id="toggle-web" setfunction={() => {setweb(!web)}}/>&nbsp;&nbsp;
-        <button type="submit">Save</button>&nbsp;<button onClick={closeCreate}>Cancel</button>
+        <button type="submit" className="save-btn">Save</button>&nbsp;<button onClick={closeCreate} className="close-btn">Cancel</button>
         </form>, document.getElementById('createMemo')
     )
 }
