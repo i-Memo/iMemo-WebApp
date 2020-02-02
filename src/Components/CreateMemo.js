@@ -4,10 +4,11 @@ import SliderComp from './SliderComp';
 import DateComponent from './DateComponent';
 
 function CreateMemo(props) {
-    const [code, setcode] = useState(false);
-    const [rem, setrem] = useState(false);
-    const [web, setweb] = useState(false);
+    const [code, setcode] = useState(false)
+    const [rem, setrem] = useState(false)
+    const [web, setweb] = useState(false)
     const [links, setlinks] = useState([])
+
     const keyHandler = (e) => {
         if(e.keyCode===83 && e.ctrlKey) {
             e.preventDefault() ;
@@ -39,8 +40,8 @@ function CreateMemo(props) {
         <input placeholder="Title" name="title" className={props.Theme ? "white create-memo-db input" : "black text-white create-memo-db input"} value={props.value.title} onChange={titleChange}/>
         {web ? <div className="div-create">
             <div className="div-input">
-            {links.map((el, index) => <React.Fragment><input type="text" name={"link" + index} className={"web-links" + (props.Theme ? " weblinks-input" : " darkmode-button text-white")}/><a href={el} target="_blank" rel="noopener noreferrer"><i class="fas fa-paper-plane"></i></a><br/></React.Fragment>)}
-            <button type="button" onClick={() => {links.push(''); setlinks(links)}} className="links-add-button"><i className={"fas fa-plus" + (props.Theme ? " text-blue" :" text-white")}></i></button>
+            {links.map((el, index) => <React.Fragment><input type="text" name={"link" + index} className={"web-links" + (props.Theme ? " weblinks-input" : " darkmode-button text-white")}/><a href={el} target="_blank" rel="noopener noreferrer"><i className="fas fa-paper-plane"></i></a><br/></React.Fragment>)}
+            <button type="submit" onClick={() => {let arr = links; arr.push(''); setlinks(arr)}} className="links-add-button"><i className={"fas fa-plus" + (props.Theme ? " text-blue" :" text-white")}></i></button>
             </div>
             </div> : 
         <textarea name="body" value={props.value.body} onChange={bodyChange} placeholder="Your Text goes here" className={props.Theme ? "white" : "black text-white"}/>

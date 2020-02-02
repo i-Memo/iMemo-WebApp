@@ -47,6 +47,27 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 1px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTzGv14rWGYAKX2VUFbTNfun-ggcuhn1ghXTTmrPpV6JNkhgbSF");  */
+  background: rgb(223, 223, 223);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 82, 150); 
+}
+
 input:focus, select:focus, button:focus{
   outline: none;
 }
@@ -69,6 +90,7 @@ input:focus, select:focus, button:focus{
   display: inline-block;
   width: 60px;
   height: 34px;
+  z-index: 999;
 }
 
 .small-switch{
@@ -221,7 +243,6 @@ input:checked + .slider:before {
 .absolute-div:hover{
   cursor: pointer;
   color: #007ee6;
-  z-index: 1;
 }
 
 .memoBtn:focus{
@@ -433,7 +454,7 @@ label{
   color: black;
   font-family: cursive;
   max-width: 100px;
-  box-shadow: 2px 2px 1px grey;
+  box-shadow: 1px 1px 1px grey;
 }
 
 .rc-time-picker input:hover{
