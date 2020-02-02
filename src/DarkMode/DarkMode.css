@@ -32,3 +32,15 @@
 .dark-create-memo-bottom{
     border-bottom: 1px solid white;
 }
+
+.absolute-div.codedark{
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.codedark .fas{
+    color: rgb(245, 208, 129);
+}
+
+.absolute-div.memodark{
+  background-image: linear-gradient(to right,rgb(0, 16, 46), rgb(9, 68, 134), rgb(0, 17, 53));
+}

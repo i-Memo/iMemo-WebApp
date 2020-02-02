@@ -7,6 +7,7 @@ import AbsoluteComp from './AbsoluteComp'
 function MemoDesign(props) {
     const [title, settitle] = useState(props.element.title)
     const [body, setbody] = useState(props.element.body)
+
     const titleChange = () => {
         if(props.element.title.indexOf(props.search) !== -1 && props.search !== ''){
             settitle(props.element.title.replace(props.search, `<span className=${props.Theme ? "search-dark" : "search"}>${props.search}</span>`))
@@ -17,6 +18,10 @@ function MemoDesign(props) {
     }
     const shareHandler = (event) => {
         console.log(title + "\n" + props.element.body);
+    }
+    const getType = (value) => {
+        if(value % 2 === 0) return true
+        return false
     }
     // const bodyChange = () => {
     //     if(props.element.body.indexOf(props.search) != -1){
@@ -37,16 +42,18 @@ function MemoDesign(props) {
             {props.time} */}
             <div>
             <div className={"memoBtn " + (props.Theme ? "lightmode-button text-black" : "darkmode-button text-white")} onClick={() => {props.setcmemo(true); props.setvalue(props.element)}}>
-                    <span className="text-left">{renderHTML(title)}</span><br/><br/>
-                    {/* <span className="text-right code" style={{marginLeft : -0.1 + 'rem'}}><i className="fas fa-code"></i></span>
-                    <span className="text-right memo"><img src={memo} height="22px" alt="m-logo"/></span>
-                    <span className="text-right rem"><i className="fas fa-bell"></i></span>
-                    <br/><br/> */}
+                    <span className="text-left">{renderHTML(title)}</span>
+                    <br/><br/>
                     <span className="text-body text-lightblack">{body} ...</span><br/><br/>
                     <span className="creation">{props.element.id}/{props.element.id}/{props.element.userId}  13:15:45</span>
-                    {/* <AbsoluteComp type="rem" shareHandler={shareHandler} display={reminder}/> */}
-                    <AbsoluteComp type="memo" shareHandler={shareHandler} display={memo}/>
-                    {/* <AbsoluteComp type="code" shareHandler={shareHandler} display={''}/> */}
+                    {
+                        (getType(props.element.userId) ? <AbsoluteComp type="memo" shareHandler={shareHandler} display={memo} Theme={props.Theme}/> : <AbsoluteComp type="code" shareHandler={shareHandler} display={''} Theme={props.Theme}/>)
+                    }
+                    <button className="absolute-div rem" type="submit" onClickCapture={shareHandler}>
+                    <span className="text-right">
+                        <span>10:58</span>
+                    </span>
+                    </button> 
             </div>
             </div>
         </React.Fragment>

@@ -249,20 +249,18 @@ input:checked + .slider:before {
 }
 
 .absolute-div.memo{
-  padding: 25px 40px;
-  /* background-color: rgba(130, 199, 255, 0.699); */
-  background-image: linear-gradient(to right,rgb(86, 150, 3), rgb(47, 128, 0), rgb(13, 77, 0));
+  padding: 20px 35px;
 }
 
 .absolute-div.code{
-  background-image: linear-gradient(to right,rgb(16, 80, 177), rgb(0, 52, 150), rgb(0, 32, 92));
-  /* background-color: rgba(0, 77, 192, 0.74); */
+  padding-right: 35px;
 }
 
 .absolute-div.rem{
-  background-image: linear-gradient(to right,rgb(226, 69, 7), rgb(182, 27, 0), rgb(80, 3, 0));
-  padding: 15px;
-  border-top-left-radius: 2rem;
+  padding: 0;
+  border-radius: 1rem;
+  right: 0.3rem;
+  bottom: 0.1rem;
 }
 
 .absolute-div .text-right img{
@@ -271,8 +269,8 @@ input:checked + .slider:before {
 }
 
 .absolute-div .text-right i{
-  font-size: 85px;
-  transform: rotate(-20deg);
+  font-size: 75px;
+  transform: rotate(-15deg);
 }
 
 .absolute-div .text-right span{
@@ -311,7 +309,7 @@ input:checked + .slider:before {
   font-size: 22px;
 }
 .code .fas{
-  color: rgb(255, 226, 64);
+  color: white;
 }
 .rem{
   font-size: 22px;

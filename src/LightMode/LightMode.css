@@ -41,3 +41,12 @@
     border: 1px solid grey;
     color: grey;
 }
+
+.absolute-div.codelight{
+  background-image: linear-gradient(to right,#FD858B, #ED335F, #761137); 
+}
+.absolute-div.memolight{
+    background-image: linear-gradient(to right,rgb(230, 215, 17), rgb(5, 177, 230), rgb(0, 89, 124));
+}
+  
+
