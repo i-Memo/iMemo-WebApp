@@ -34,11 +34,13 @@
 }
 
 .absolute-div.codedark{
-    background-color: rgba(0, 0, 0, 0.63);
+    /* background-color: rgba(0, 0, 0, 0.63); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.5)) ,url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSwRVvFjLJxzLEjS6gQadHL9i-pFK5JsET8rghQwTh4xuDBLlFl');
+    background-size: contain;
 }
 
 .codedark .fas{
-    color: rgb(245, 208, 129);
+    /* color: rgb(245, 208, 129); */
 }
 
 .absolute-div.memodark{
