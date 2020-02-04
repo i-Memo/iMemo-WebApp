@@ -18,3 +18,8 @@
     width: 20%;
 >>>>>>> 089c516f3ba792efba6923d34e292f347244e6fa
 }
+
+.createMemo{
+    z-index: 3;
+    position: fixed;
+}

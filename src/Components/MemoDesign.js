@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import renderHTML from 'react-render-html'
 import memo from '../LightMode/memo.png'
-import reminder from '../LightMode/reminder.png'
 import AbsoluteComp from './AbsoluteComp'
 
 function MemoDesign(props) {
