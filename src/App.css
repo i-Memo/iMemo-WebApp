@@ -322,6 +322,25 @@ input:checked + .slider:before {
 .rem .fas{
     color: #ff5d5d;
 }
+
+.outer-d{
+  position: relative;
+}
+
+.inner-delete{
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  border: 0;
+  border-radius: 0.2rem;
+  color: #d40000;
+}
+
+.inner-delete:hover{
+  color: white;
+  background-color:#d40000;
+  cursor: pointer;
+}
 .search-button{
   padding: 5px;
   position: fixed;

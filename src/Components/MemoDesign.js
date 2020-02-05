@@ -39,7 +39,7 @@ function MemoDesign(props) {
             {props.text}
             {props.createdDate}
             {props.time} */}
-            <div>
+            <div className="outer-d">
             <div className={"memoBtn " + (props.Theme ? "lightmode-button text-black" : "darkmode-button text-white")} onClick={() => {props.setcmemo(true); props.setvalue(props.element)}}>
                     <span className="text-left">{renderHTML(title)}</span>
                     <br/><br/>
@@ -54,6 +54,7 @@ function MemoDesign(props) {
                     </span>
                     </button> 
             </div>
+            <button className="inner-delete"><i className="fas fa-trash"></i></button>
             </div>
         </React.Fragment>
     )
