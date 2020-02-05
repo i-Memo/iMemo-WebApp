@@ -39,10 +39,6 @@
     background-size: contain;
 }
 
-.codedark .fas{
-    /* color: rgb(245, 208, 129); */
-}
-
 .absolute-div.memodark{
   /* background-image: linear-gradient(to right,rgb(0, 16, 46), rgb(9, 68, 134), rgb(0, 17, 53)); */
   background-image: linear-gradient(rgba(0, 0, 0, 0.814), rgba(0, 0, 0, 0.8)) ,url('./memobackground3.jpg');
