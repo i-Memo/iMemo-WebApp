@@ -12,12 +12,14 @@ import "ace-builds/src-noconflict/mode-c_cpp";
 import "ace-builds/src-noconflict/mode-python";
 import "ace-builds/src-noconflict/theme-twilight";
 import "ace-builds/src-noconflict/theme-eclipse";
+import FilesComponent from './FilesComponent';
 
 function CreateMemo(props) {
     const [code, setcode] = useState(false)
     const [rem, setrem] = useState(false)
     const [web, setweb] = useState(false)
     const [links, setlinks] = useState([])
+    const [file, setfile] = useState(false)
     const [language, setlanguage] = useState('javascript')
     const keyHandler = (e) => {
         if(e.keyCode===83 && e.ctrlKey) {
@@ -64,7 +66,8 @@ function CreateMemo(props) {
             width="80%"
             height="50%"
             /> : ''}
-        {web ? <LinksComponent links={links} setlinks={setlinks}/> : ''}    
+        {web ? <LinksComponent links={links} setlinks={setlinks} Theme={props.Theme}/> : ''}    
+        {file ? <FilesComponent links={links} setlinks={setlinks} Theme={props.Theme}/> : ''}    
 
         <div className={"create-memo " + (props.Theme ? "create-memo-light-bg" : "dark-create-memo-bg text-white")}>
         <input placeholder="Title" name="title" className={props.Theme ? "white create-memo-db input" : "black text-white create-memo-db input"} value={props.value.title} onChange={titleChange}/>
@@ -84,8 +87,10 @@ function CreateMemo(props) {
         Remainder :&nbsp;
         <SliderComp extraOuterClass="small-switch" extraInnerClass="small-bg" id="toggle-remainder" setfunction={() => {setrem(!rem)}}/>&nbsp;
         {rem ? <DateComponent/> : ''}&nbsp;
-        Links :&nbsp;
-        <button className="attach-links" id="toggle-web" onClick={() => {setweb(!web);}}><i className="fas fa-link"></i></button>&nbsp;&nbsp;
+        &nbsp;
+        <button className="attach-links" id="toggle-web" onClick={() => {setweb(!web); setfile(false);}}><i className="fas fa-link"></i></button>&nbsp;&nbsp;
+        &nbsp;
+        <button className="file-upload" id="toggle-file" onMouseEnter={() => {setfile(!file); setweb(false);}}><i className="fas fa-file-upload"></i></button>&nbsp;&nbsp;
         <br/>
         <button type="submit" className="save-btn">Save</button>&nbsp;
         <button onClick={closeCreate} className="close-btn">Cancel</button>&nbsp;

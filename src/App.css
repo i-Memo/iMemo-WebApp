@@ -402,18 +402,17 @@ input:checked + .slider:before {
 }
 
 
-.create-links{
+.create-links, .create-files{
   min-width: 40vw;
   max-width: 40vw;
   max-height: 30vh;
   padding: 4px;
   overflow-y: scroll;
   position: fixed;
-  bottom: 22vh;
+  bottom: 24vh;
   right: 20vw;
   border-radius: 10px;
   z-index: 5;
-  border: 1px solid black;
 }
 
 .div-input{
@@ -458,6 +457,20 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
+.file-upload{
+  padding: 3px 30px;
+  border-radius: 5px;
+  font-size: medium;
+  color: rgb(59, 151, 255);
+  border: 0;
+}
+
+.file-upload:hover{
+  background-color: rgb(62, 130, 255);
+  color: white;
+  cursor: pointer;
+}
+
 .web-links{
   padding: 0.6rem;
   width: 28vw;
@@ -468,6 +481,14 @@ input:checked + .slider:before {
 
 .web-links:focus{
   outline: none;
+}
+
+.create-links .fa-paper-plane{
+  color: grey;
+}
+
+.create-links .fa-paper-plane:hover{
+  color: red;
 }
 
 .links-add-button{
@@ -486,15 +507,6 @@ input:checked + .slider:before {
 
 .links-add-button:focus{
   outline: none;
-}
-
-.div-input .fa-paper-plane {
-  margin-left: 1rem;
-  color: rgb(189, 189, 189);
-}
-
-.div-input .fa-paper-plane:hover{
-  color: red;
 }
 
 .save-btn, .close-btn, .share-btn{
@@ -519,7 +531,7 @@ input:checked + .slider:before {
   .web-links{
     width: 50vw;
   }
-  .create-links{
+  .create-links ,.create-files{
     max-width: 70vw;
     right: 10vw;
   }

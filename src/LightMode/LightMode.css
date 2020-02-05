@@ -2,7 +2,7 @@
     background-color: white;
 }
 .dim-white{
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(233, 233, 233);
 }
 .light-design-background{
     background-image: url("./background3.jfif");
@@ -45,7 +45,7 @@
 .absolute-div.codelight{
   /* background-image: linear-gradient(to right,#FD858B, #ED335F, #761137);  */
   background-image: linear-gradient(rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0.158)) ,url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSwRVvFjLJxzLEjS6gQadHL9i-pFK5JsET8rghQwTh4xuDBLlFl');
-    background-size: cover;
+    background-size: contain;
 }
 .absolute-div.memolight{
     background-image: linear-gradient(to right,rgb(230, 215, 17), rgb(5, 177, 230), rgb(0, 89, 124));
