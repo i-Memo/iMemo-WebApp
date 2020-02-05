@@ -371,7 +371,7 @@ input:checked + .slider:before {
 
 .code-editor{
   position: fixed;
-  z-index: 7;
+  z-index: 4;
   top: 25vh;
   right: 5vw;
 }
@@ -400,6 +400,22 @@ input:checked + .slider:before {
   padding: 16px;
   overflow-y: scroll;
 }
+
+
+.create-links{
+  min-width: 40vw;
+  max-width: 40vw;
+  max-height: 30vh;
+  padding: 4px;
+  overflow-y: scroll;
+  position: fixed;
+  bottom: 22vh;
+  right: 20vw;
+  border-radius: 10px;
+  z-index: 5;
+  border: 1px solid black;
+}
+
 .div-input{
   float: left;
 }
@@ -407,13 +423,6 @@ input:checked + .slider:before {
 .create-memo .input:focus, .create-memo textarea:focus{
   outline: none;
 }
-/* 
-.create-memo .iframe{
-  float: right;
-  position: fixed;
-  width: 28vw;
-  height: 18vw;
-} */
 
 
 .date-select, .code-select{
@@ -425,6 +434,7 @@ input:checked + .slider:before {
   box-shadow: 1px 1px 1px grey;
 }
 
+
 .date-select:hover{
   background-color: rgb(228, 228, 228);
 }
@@ -432,6 +442,20 @@ input:checked + .slider:before {
 .code-select{
   max-height: 100px;
   overflow-y: scroll;
+}
+
+
+.attach-links{
+  border-radius: 50%;
+  border: 0;
+  padding: 6px 7px;
+  color: rgb(59, 151, 255);
+}
+
+.attach-links:hover{
+  color: white;
+  background-color: rgb(62, 130, 255);
+  cursor: pointer;
 }
 
 .web-links{
@@ -452,7 +476,6 @@ input:checked + .slider:before {
   padding: 0.5rem;
   background-color: transparent;
   border: 1px solid grey;
-  color: white;
 }
 
 .links-add-button:hover{
@@ -495,6 +518,10 @@ input:checked + .slider:before {
   }
   .web-links{
     width: 50vw;
+  }
+  .create-links{
+    max-width: 70vw;
+    right: 10vw;
   }
 }
 
