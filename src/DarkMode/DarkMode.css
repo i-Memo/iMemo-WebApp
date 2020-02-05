@@ -35,7 +35,7 @@
 
 .absolute-div.codedark{
     /* background-color: rgba(0, 0, 0, 0.63); */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.5)) ,url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSwRVvFjLJxzLEjS6gQadHL9i-pFK5JsET8rghQwTh4xuDBLlFl');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.5)) ,url('./codebackground.jfif');
     background-size: contain;
 }
 
@@ -45,5 +45,8 @@
 
 .absolute-div.memodark{
   /* background-image: linear-gradient(to right,rgb(0, 16, 46), rgb(9, 68, 134), rgb(0, 17, 53)); */
-  background-color: rgba(0, 0, 0, 0.63);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.814), rgba(0, 0, 0, 0.8)) ,url('./memobackground3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-color: rgba(0, 0, 0, 0.63); */
 }

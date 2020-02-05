@@ -263,6 +263,11 @@ input:checked + .slider:before {
   bottom: 0.1rem;
 }
 
+.absolute-div .text-right div{
+  min-width: 110px;
+  min-height: 44px;
+}
+
 .absolute-div .text-right img{
   height: 85px;
   transform: rotate(-20deg);
