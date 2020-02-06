@@ -364,7 +364,7 @@ input:checked + .slider:before {
 
 
 .create-memo{
-  max-height: 75vh;
+  max-height: 75%;
   overflow-y: auto;
   max-width: 90vw;
   width: 80%;
@@ -399,7 +399,9 @@ input:checked + .slider:before {
   z-index: 4;
   top: 25vh;
   right: 5vw;
+  max-height: 50%;
 }
+
 
 .create-memo div{
   max-width: 94%;
@@ -534,7 +536,8 @@ input:checked + .slider:before {
   outline: none;
 }
 
-.save-btn, .close-btn, .share-btn{
+.save-btn, .close-btn, .share-btn, .copy-btn{
+  margin-top: 3px;
   padding: 4px 10px;
   border: 2px solid #007ee6;
   background-color: #007ee6;
@@ -543,13 +546,13 @@ input:checked + .slider:before {
   font-weight: 600;
 }
 
-.save-btn:hover, .close-btn:hover, .share-btn:hover {
+.save-btn:hover, .close-btn:hover, .share-btn:hover , .copy-btn:hover{
   background-color: #0065b8;
   border: 2px solid #0065b8;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 635px){
+@media only screen and (max-width: 675px){
   .create-memo .iframe{
     display: none;
   }
@@ -559,6 +562,25 @@ input:checked + .slider:before {
   .create-links ,.create-files{
     max-width: 70vw;
     right: 10vw;
+  }
+  .create-memo{
+    max-height: 90vh;
+    top: 5vh;
+  }
+  .code-editor{
+    top: 20vh;
+  }
+}
+
+
+@media only screen and (max-height: 600px){
+  .code-editor{
+    top: 15vh;
+    left: 6vw;
+  }
+  .create-memo{
+    max-height: 100vh;
+    top: 0;
   }
 }
 

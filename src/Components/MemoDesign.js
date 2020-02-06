@@ -40,13 +40,18 @@ function MemoDesign(props) {
             {props.createdDate}
             {props.time} */}
             <div className="outer-d">
-            <div className={"memoBtn " + (props.Theme ? "lightmode-button text-black" : "darkmode-button text-white")} onClick={() => {props.setcmemo(true); props.setvalue(props.element)}}>
+            <div className={"memoBtn " + (props.Theme ? "lightmode-button text-black" : "darkmode-button text-white")} 
+                 onClick={() => {props.setcmemo(true); props.setvalue(props.element)}}>
                     <span className="text-left">{renderHTML(title)}</span>
                     <br/><br/>
                     <span className="text-body text-lightblack">{body} ...</span><br/><br/>
-                    <span className="creation">{props.element.id}/{props.element.id}/{props.element.userId}  13:15:45</span>
+                    <span className="creation">
+                        {props.element.id}/{props.element.id}/{props.element.userId}  13:15:45
+                    </span>
                     {
-                        (getType(props.element.userId) ? <AbsoluteComp type="memo" shareHandler={shareHandler} display={memo} Theme={props.Theme}/> : <AbsoluteComp type="code" shareHandler={shareHandler} display={''} Theme={props.Theme}/>)
+                        (getType(props.element.userId) ? 
+                        <AbsoluteComp type="memo" shareHandler={shareHandler} display={memo} Theme={props.Theme}/> : 
+                        <AbsoluteComp type="code" shareHandler={shareHandler} display={''} Theme={props.Theme}/>)
                     }
                     <button className="absolute-div rem" type="submit" onClickCapture={shareHandler}>
                     <span className="text-right">

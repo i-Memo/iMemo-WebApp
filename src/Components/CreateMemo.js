@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState, useEffect, useRef} from 'react'
 import ReactDOM from 'react-dom'
 import SliderComp from './SliderComp';
 import DateComponent from './DateComponent';
@@ -21,6 +21,19 @@ function CreateMemo(props) {
     const [links, setlinks] = useState([])
     const [file, setfile] = useState(false)
     const [language, setlanguage] = useState('javascript')
+    const [copySuccess, setCopySuccess] = useState('');
+    const textAreaRef = useRef(null);
+
+    const copyToClipboard = (e) => {
+        textAreaRef.current.onCopy()
+        // textAreaRef.current.select();
+        document.execCommand('copy');
+        // This is just personal preference.
+        // I prefer to not show the the whole text area selected.
+        e.target.focus();
+        setCopySuccess('Copied!');
+    };
+
     const keyHandler = (e) => {
         if(e.keyCode===83 && e.ctrlKey) {
             e.preventDefault() ;
@@ -52,7 +65,7 @@ function CreateMemo(props) {
         };
     })
     return ReactDOM.createPortal(
-        <div>
+        <div className="outer-d">
             {code ? <AceEditor
             mode={language}
             theme={props.Theme ? "eclipse" : "twilight"}
@@ -64,7 +77,7 @@ function CreateMemo(props) {
             editorProps={{ $blockScrolling: Infinity }}
             className="code-editor"
             width="80%"
-            height="50%"
+            ref={textAreaRef}
             /> : ''}
         {web ? <LinksComponent links={links} setlinks={setlinks} Theme={props.Theme}/> : ''}    
         {file ? <FilesComponent links={links} setlinks={setlinks} Theme={props.Theme}/> : ''}    
@@ -73,7 +86,7 @@ function CreateMemo(props) {
         <input placeholder="Title" name="title" className={props.Theme ? "white create-memo-db input" : "black text-white create-memo-db input"} value={props.value.title} onChange={titleChange}/>
             
         
-        {code ? <div className="div-create"></div> : <textarea id="text-area" value={props.value.body} onChange={bodyChange} placeholder="Your text goes here" className={props.Theme ? "white" : "black text-white"}/>}
+        {code ? <div className="div-create"></div> : <textarea ref={textAreaRef} id="text-area" value={props.value.body} onChange={bodyChange} placeholder="Your text goes here" className={props.Theme ? "white" : "black text-white"}/>}
         Code :&nbsp;
         <SliderComp extraOuterClass="small-switch" extraInnerClass="small-bg" id="toggle-code" setfunction={() => {setcode(!code);}}/>&nbsp;
         {code ? <select className="code-select" value={language} onChange={(e) => setlanguage(e.target.value)}>
@@ -99,7 +112,10 @@ function CreateMemo(props) {
         </button>&nbsp;
         <button className="share-btn" type="submit">
             <i className="fas fa-file-download"></i>
-        </button>
+        </button>&nbsp;
+        <button className="copy-btn" type="submit" onClick={copyToClipboard}>
+            <i className="fas fa-copy"></i>
+        </button>{copySuccess}
         </div>
         </div>, document.getElementById('createMemo')
     )
