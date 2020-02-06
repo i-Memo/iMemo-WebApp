@@ -564,8 +564,9 @@ input:checked + .slider:before {
     right: 10vw;
   }
   .create-memo{
-    max-height: 90vh;
-    top: 5vh;
+    max-height: 96vh;
+    height: 95%;
+    top: 3vh;
   }
   .code-editor{
     top: 20vh;
@@ -576,10 +577,11 @@ input:checked + .slider:before {
 @media only screen and (max-height: 600px){
   .code-editor{
     top: 15vh;
-    left: 6vw;
+    left: 15%;
   }
   .create-memo{
     max-height: 100vh;
+    height: 90%;
     top: 0;
   }
 }
