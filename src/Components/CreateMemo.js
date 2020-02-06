@@ -25,11 +25,12 @@ function CreateMemo(props) {
     const textAreaRef = useRef(null);
 
     const copyToClipboard = (e) => {
-        textAreaRef.current.onCopy()
-        // textAreaRef.current.select();
-        document.execCommand('copy');
-        // This is just personal preference.
-        // I prefer to not show the the whole text area selected.
+        var dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.value = props.value.body;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
         e.target.focus();
         setCopySuccess('Copied!');
     };
@@ -61,7 +62,6 @@ function CreateMemo(props) {
         document.addEventListener("keydown", keyHandler, false);
         return () => {
             document.removeEventListener("keydown", keyHandler, false);
-
         };
     })
     return ReactDOM.createPortal(
@@ -77,7 +77,6 @@ function CreateMemo(props) {
             editorProps={{ $blockScrolling: Infinity }}
             className="code-editor"
             width="80%"
-            ref={textAreaRef}
             /> : ''}
         {web ? <LinksComponent links={links} setlinks={setlinks} Theme={props.Theme}/> : ''}    
         {file ? <FilesComponent links={links} setlinks={setlinks} Theme={props.Theme}/> : ''}    
@@ -115,7 +114,7 @@ function CreateMemo(props) {
         </button>&nbsp;
         <button className="copy-btn" type="submit" onClick={copyToClipboard}>
             <i className="fas fa-copy"></i>
-        </button>{copySuccess}
+        </button>&nbsp;<span style={{fontSize: "0.8rem    "}}>{copySuccess}</span>
         </div>
         </div>, document.getElementById('createMemo')
     )
