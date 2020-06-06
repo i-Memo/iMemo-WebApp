@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/imemo/static/css/main.5cb499d9.chunk.css",
+    "main.js": "/imemo/static/js/main.b7c80f3a.chunk.js",
+    "main.js.map": "/imemo/static/js/main.b7c80f3a.chunk.js.map",
+    "runtime-main.js": "/imemo/static/js/runtime-main.d7b248a1.js",
+    "runtime-main.js.map": "/imemo/static/js/runtime-main.d7b248a1.js.map",
+    "static/css/2.826c19ff.chunk.css": "/imemo/static/css/2.826c19ff.chunk.css",
+    "static/js/2.1a60a7f6.chunk.js": "/imemo/static/js/2.1a60a7f6.chunk.js",
+    "static/js/2.1a60a7f6.chunk.js.map": "/imemo/static/js/2.1a60a7f6.chunk.js.map",
+    "index.html": "/imemo/index.html",
+    "precache-manifest.577276fb7f41909d868b32e24dcaa6bc.js": "/imemo/precache-manifest.577276fb7f41909d868b32e24dcaa6bc.js",
+    "service-worker.js": "/imemo/service-worker.js",
+    "static/css/2.826c19ff.chunk.css.map": "/imemo/static/css/2.826c19ff.chunk.css.map",
+    "static/css/main.5cb499d9.chunk.css.map": "/imemo/static/css/main.5cb499d9.chunk.css.map",
+    "static/js/2.1a60a7f6.chunk.js.LICENSE": "/imemo/static/js/2.1a60a7f6.chunk.js.LICENSE",
+    "static/media/LogoDark.PNG": "/imemo/static/media/LogoDark.0879e51d.PNG",
+    "static/media/LogoLight.PNG": "/imemo/static/media/LogoLight.423014be.PNG",
+    "static/media/DarkMode.css": "/imemo/static/media/background.3c416041.jfif",
+    "static/media/LightMode.css": "/imemo/static/media/memobackground3.de29ff08.jpg",
+    "static/media/loadingDark.PNG": "/imemo/static/media/loadingDark.c28e9f33.PNG",
+    "static/media/loadingLight.jpg": "/imemo/static/media/loadingLight.bd132c36.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d7b248a1.js",
+    "static/css/2.826c19ff.chunk.css",
+    "static/js/2.1a60a7f6.chunk.js",
+    "static/css/main.5cb499d9.chunk.css",
+    "static/js/main.b7c80f3a.chunk.js"
+  ]
+}

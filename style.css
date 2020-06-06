@@ -1,0 +1,14 @@
+#left{
+    width: 20%;
+}
+#middle{
+    width: 60%;
+}
+#right{
+    width: 20%;
+}
+
+.createMemo{
+    z-index: 3;
+    position: fixed;
+}
