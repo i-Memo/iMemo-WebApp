@@ -669,12 +669,12 @@ label{
   display: none;
 }
 
-@media screen and (max-width: 300px){
-  /* #root, footer{
+/* @media screen and (max-width: 300px){
+  #root, footer{
     display: none;
-  }  */
+  } 
   .message{
     display: block;
     text-align: center;
   }
-}
+} */
