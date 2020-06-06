@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #left{
     width: 20%;
 }
@@ -7,16 +6,6 @@
 }
 #right{
     width: 20%;
-=======
-#left{
-    width: 20%;
-}
-#middle{
-    width: 60%;
-}
-#right{
-    width: 20%;
->>>>>>> 089c516f3ba792efba6923d34e292f347244e6fa
 }
 
 .createMemo{

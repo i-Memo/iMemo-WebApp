@@ -68,6 +68,15 @@
   background: rgb(0, 82, 150); 
 }
 
+div .rel{
+  position: relative;
+}
+
+div .abs{
+  position: absolute;
+  right: 0em;
+}
+
 input:focus, select:focus, button:focus{
   outline: none;
 }
@@ -492,10 +501,27 @@ input:checked + .slider:before {
   border: 0;
 }
 
-.file-upload:hover{
+.upload{
+  width: 80%;
+  margin: 0 10%;
+  margin-top: 10px;
+  padding: 3px;
+  font-size: medium;
+  border: 0;
+  border-radius: 5px;
+  background-color: grey;
+  color: white;
+}
+
+.file-upload:hover, .upload:hover{
   background-color: rgb(62, 130, 255);
   color: white;
   cursor: pointer;
+}
+
+.upload span{
+  font-size: small;
+  margin-left: 3px;
 }
 
 .web-links{
@@ -530,6 +556,11 @@ input:checked + .slider:before {
   background-color: #007ee6;
   border: 1px solid #007ee6;
   cursor: pointer;
+}
+
+.file{
+  text-decoration: none;
+  padding: 2px;
 }
 
 .links-add-button:focus{
@@ -634,3 +665,16 @@ label{
   color: black;
 }
 
+.message{
+  display: none;
+}
+
+@media screen and (max-width: 300px){
+  #root, footer{
+    display: none;
+  }
+  .message{
+    display: block;
+    text-align: center;
+  }
+}
