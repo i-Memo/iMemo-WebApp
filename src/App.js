@@ -7,7 +7,6 @@ import Axios from 'axios';
 import MainPage from './MainPage';
 import FooterApp from './footerApp';
 import CreateMemo from './Components/CreateMemo';
-import { BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
   let [Theme, setTheme] = useState(false);
@@ -37,18 +36,15 @@ function App() {
     }, 1000);
   }, [loginState])
   return (
-      <Router exact path={`/home`} render={ (routerProps) => 
-      <React.Fragment>
-        <label className="switch" id="toggle" onChange={toggle}>
-          <input type="checkbox"/>
-          <span className="slider round"></span>
-        </label>
-        {state ? <MainPage Theme={Theme} store={store} setcmemo={setcmemo} setvalue={setvalue}/> : <LoadingPage Theme={Theme} loginState={loginState} setloginState={setloginState}/>}
-        {cmemo ? <CreateMemo Theme={Theme} setcmemo={setcmemo} cmemo={cmemo} value={value} setvalue={setvalue}/> : ""}
-        <FooterApp Theme={Theme}/>
-      </React.Fragment>
-      } />
-      
+    <React.Fragment>
+      <label className="switch" id="toggle" onChange={toggle}>
+        <input type="checkbox"/>
+        <span className="slider round"></span>
+      </label>
+      {state ? <MainPage Theme={Theme} store={store} setcmemo={setcmemo} setvalue={setvalue}/> : <LoadingPage Theme={Theme} loginState={loginState} setloginState={setloginState}/>}
+      {cmemo ? <CreateMemo Theme={Theme} setcmemo={setcmemo} cmemo={cmemo} value={value} setvalue={setvalue}/> : ""}
+      <FooterApp Theme={Theme}/>
+    </React.Fragment>
   );
 }
 
