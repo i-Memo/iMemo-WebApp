@@ -37,7 +37,7 @@ function App() {
     }, 1000);
   }, [loginState])
   return (
-      <Route exact path={`/home`} render={ (routerProps) => 
+      <Router exact path={`/home`} render={ (routerProps) => 
       <React.Fragment>
         <label className="switch" id="toggle" onChange={toggle}>
           <input type="checkbox"/>
