@@ -7,6 +7,7 @@ import Axios from 'axios';
 import MainPage from './MainPage';
 import FooterApp from './footerApp';
 import CreateMemo from './Components/CreateMemo';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
   let [Theme, setTheme] = useState(false);
