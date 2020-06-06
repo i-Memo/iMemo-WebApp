@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/imemo-webapp/precache-manifest.120160c0fa0f62393d5b1991d65871f0.js"
+  "/imemo-webapp/precache-manifest.77fc670433f814c540eb29411d6fe7be.js"
 );
 
 self.addEventListener('message', (event) => {
