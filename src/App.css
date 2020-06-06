@@ -669,7 +669,7 @@ label{
   display: none;
 }
 
-/* @media screen and (max-width: 300px){
+@media screen and (max-width: 300px){
   #root, footer{
     display: none;
   } 
@@ -677,4 +677,4 @@ label{
     display: block;
     text-align: center;
   }
-} */
+}

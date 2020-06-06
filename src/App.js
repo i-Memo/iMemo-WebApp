@@ -37,6 +37,7 @@ function App() {
   }, [loginState])
   return (
     <React.Fragment>
+      <Route exact path={`/home`} render={ (routerProps) => < Home routerProps={routerProps} setUpGame={this.setUpGame} />} />
       <label className="switch" id="toggle" onChange={toggle}>
         <input type="checkbox"/>
         <span className="slider round"></span>
