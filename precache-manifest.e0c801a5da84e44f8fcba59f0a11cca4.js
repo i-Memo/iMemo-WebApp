@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "26355ef8738c519df5fb93c48dc1d6d1",
+    "revision": "8e0a644adaa82731c0b2c644082c01f9",
     "url": "/imemo-webapp/index.html"
   },
   {
-    "revision": "0b6214df014e47837dd9",
+    "revision": "ea5c75b89bc335c059f6",
     "url": "/imemo-webapp/static/css/2.826c19ff.chunk.css"
   },
   {
-    "revision": "c6257e881a79622faafe",
+    "revision": "793f5064df5434d00735",
     "url": "/imemo-webapp/static/css/main.fb292808.chunk.css"
   },
   {
-    "revision": "0b6214df014e47837dd9",
-    "url": "/imemo-webapp/static/js/2.8f3a3f56.chunk.js"
+    "revision": "ea5c75b89bc335c059f6",
+    "url": "/imemo-webapp/static/js/2.05366936.chunk.js"
   },
   {
     "revision": "ff6f1f3be7ff3c092017e2974c44a438",
-    "url": "/imemo-webapp/static/js/2.8f3a3f56.chunk.js.LICENSE"
+    "url": "/imemo-webapp/static/js/2.05366936.chunk.js.LICENSE"
   },
   {
-    "revision": "c6257e881a79622faafe",
-    "url": "/imemo-webapp/static/js/main.78107e4f.chunk.js"
+    "revision": "793f5064df5434d00735",
+    "url": "/imemo-webapp/static/js/main.390cc045.chunk.js"
   },
   {
     "revision": "98b03d6139d819265ee4",
