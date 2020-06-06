@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/imemo-webapp/static/css/main.1fe01a46.chunk.css",
+    "main.css": "/imemo-webapp/static/css/main.8761e3cd.chunk.css",
     "main.js": "/imemo-webapp/static/js/main.3c1f5c05.chunk.js",
     "main.js.map": "/imemo-webapp/static/js/main.3c1f5c05.chunk.js.map",
     "runtime-main.js": "/imemo-webapp/static/js/runtime-main.0dc926be.js",
@@ -9,10 +9,10 @@
     "static/js/2.cc852a91.chunk.js": "/imemo-webapp/static/js/2.cc852a91.chunk.js",
     "static/js/2.cc852a91.chunk.js.map": "/imemo-webapp/static/js/2.cc852a91.chunk.js.map",
     "index.html": "/imemo-webapp/index.html",
-    "precache-manifest.f6252ad76da1dddecc39cb1a4e47e29a.js": "/imemo-webapp/precache-manifest.f6252ad76da1dddecc39cb1a4e47e29a.js",
+    "precache-manifest.1501b54086cc47f98bca2ddd70febe7b.js": "/imemo-webapp/precache-manifest.1501b54086cc47f98bca2ddd70febe7b.js",
     "service-worker.js": "/imemo-webapp/service-worker.js",
     "static/css/2.826c19ff.chunk.css.map": "/imemo-webapp/static/css/2.826c19ff.chunk.css.map",
-    "static/css/main.1fe01a46.chunk.css.map": "/imemo-webapp/static/css/main.1fe01a46.chunk.css.map",
+    "static/css/main.8761e3cd.chunk.css.map": "/imemo-webapp/static/css/main.8761e3cd.chunk.css.map",
     "static/js/2.cc852a91.chunk.js.LICENSE": "/imemo-webapp/static/js/2.cc852a91.chunk.js.LICENSE",
     "static/media/LogoDark.PNG": "/imemo-webapp/static/media/LogoDark.0879e51d.PNG",
     "static/media/LogoLight.PNG": "/imemo-webapp/static/media/LogoLight.423014be.PNG",
@@ -25,7 +25,7 @@
     "static/js/runtime-main.0dc926be.js",
     "static/css/2.826c19ff.chunk.css",
     "static/js/2.cc852a91.chunk.js",
-    "static/css/main.1fe01a46.chunk.css",
+    "static/css/main.8761e3cd.chunk.css",
     "static/js/main.3c1f5c05.chunk.js"
   ]
 }
