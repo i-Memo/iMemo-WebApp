@@ -1,4 +1,4 @@
-##Link to the project: https://i-memo.github.io/iMemo-WebApp/
+### Link to the project: https://i-memo.github.io/iMemo-WebApp/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
